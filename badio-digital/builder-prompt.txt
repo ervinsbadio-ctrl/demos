@@ -1,0 +1,66 @@
+# Rosa redesign brief: Badio Digital homepage
+
+App: Badio Digital, id 6aff4656a589221e2da77d20
+Live: https://badiodigital.ervinsbadio.com
+Receipt: 2298bd4470fceec046594df5 (ended owner call, 2026-11-20 21:34 UTC)
+Mode: redesign (design only, copy preserved)
+
+## Why
+Owner said on the call: "use Rosa as the agent to do the website design on Badio Digital because I don't like it."
+The copy is approved and stays. What fails is the composition: every section is a list of text rows on flat sand or
+white, headings barely change size, there is no dark contrast anywhere, and the page reads like a document instead of
+a designed page.
+
+## Art direction card
+- Look: "harbour and sand", editorial, generous, confident. Not a template.
+- Base canvas: sand #E4D9C6. Ink: navy #17324D. Paper: #FBF8F3. Deep band: #0F2338.
+- Accent: none beyond navy and sand. No gradients, no glass, no stock photos, no icons for decoration.
+- Type: Archivo 700/800 for every heading, tracking -0.03em. Lato 400 for body at 18px / 1.65.
+  Eyebrow: Archivo 600, 12px, uppercase, tracking 0.14em.
+  Desktop scale: h1 72px / 0.98, h2 44px / 1.05, h3 22px. Phone: h1 38px, h2 30px.
+- Grid: max 1200px, gutters 24px phone / 56px desktop. Section padding 64px phone / 96px desktop.
+- One button style: navy fill, #FBF8F3 label, 52px tall, 8px radius. Quiet links are navy with a 1px underline on hover.
+- Rhythm: sand, sand, navy band, paper, sand, paper, navy, deep navy footer. Contrast comes from full-bleed bands, not borders.
+
+## Section by section
+1. Header. Sticky, sand, 1px navy at 12% opacity along the bottom. Text wordmark "Badio Digital", Archivo 700, 20px,
+   letter spacing 0.02em. Four links plus the primary button. Mobile: menu button, full-width panel, 44px rows.
+2. Hero. Two columns at desktop, text 52% left, phone mockup 48% right, stacked with text first on phone.
+   Eyebrow, h1, one paragraph at 18px capped at 540px, primary button, quiet link "See a salon website I built".
+   Under the button one line at 14px: "Live in 48 hours. You see it finished before you decide."
+   The phone mockup is the existing lavalette-phone.png inside a simple 380px phone frame with a 1px navy/15% border and
+   a soft shadow. Caption under it at 13px: "Lavalette Nails and Spa, Huntington. A salon website I built."
+3. Navy band, full bleed, #17324D, white text. Section title in sand: "What it costs you right now."
+   The three existing loss points as three columns, each with a sand numeral 01 02 03 at 56px and 35% opacity above an
+   Archivo 700 26px heading and the paragraph at 17px in #FBF8F3 at 80%. This is the visual anchor of the page.
+4. "What you get, in order." Paper background. Six steps in two columns of three, each row a sand numeral chip
+   (Archivo 700 15px navy on sand, 40px square, 6px radius) and the text at 17px, thin navy 8% dividers between rows.
+5. Example. Sand background. The existing lavalette-desktop.png at full width inside a browser frame: 8px radius,
+   1px navy/15%, a 28px top bar with three 8px dots. Below it, left: h2 "Lavalette Nails & Spa, Huntington" and the
+   paragraph, right: quiet link "Open the live site".
+6. About. Paper background, two columns. Left: the wordmark "Badio Digital" set large in Archivo 700 40px navy over a
+   sand block, with "Huntington, West Virginia" at 14px underneath. Right: h2 "I build these myself." and the paragraph.
+7. Questions. Sand background. Five native details/summary rows, Archivo 700 20px question, Lato 17px answer,
+   1px navy/12% dividers, a 24px plus sign that rotates to a minus when open. First row open by default.
+8. Contact. Full-bleed navy. Left: h2 "Send me your salon details." plus the paragraph, then the phone as a 30px
+   Archivo 700 tel: link, the email, and "I answer within one business day." Right: a #FBF8F3 card, 16px radius,
+   40px padding, four labelled fields (name, business name, phone, what do you need), 48px tall, 1px navy/20% borders,
+   sand focus ring, and the navy submit button. Inline success and error text, never a fake success.
+9. Footer. #0F2338. Wordmark, one line of what he does, phone and email, and a single line of small print. No invented
+   legal pages.
+
+## Must not change
+- Copy stays word for word, apart from the three section titles named above.
+- No prices anywhere on the page.
+- No reviews, testimonials, ratings, client logos, awards, guarantees or statistics. There are none, so none appear.
+- Phone stays 304-544-8511 as a tel: link, email stays ervinslyonorbadio@gmail.com.
+- The form keeps saving to the Enquiries entity with name, business_name, phone, message and source.
+- Keep the page title and meta description as they are.
+- Use only the two existing screenshots already in the project. No new images, no AI generated images, no stock.
+- No image behind any text, ever.
+
+## Check before finishing
+- Hero fits one screen at 1440x900 and at 390x844 without scrolling, and no sideways scroll at 390px.
+- One h1 on the page. Every nav anchor lands on its section. Focus rings visible. Tap targets 44px.
+- A real form submit creates one Enquiries row and shows the inline success message.
+- Reduced motion respected: no movement when prefers-reduced-motion is set.
