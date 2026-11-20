@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M &amp; M Nails and Spa | Nail salon in Huntington, WV</title>
+<meta name="description" content="M &amp; M Nails and Spa, Nail salon in Huntington, WV. Call (304) 962-6999.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#6D2E4F;
+    --ink:#14212B;
+    --paper:#FBFAF8;
+    --muted:#5A6B75;
+    --line:#E4E0D9;
+    --display:'Archivo',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;overflow-x:hidden}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;margin:0}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{width:min(1080px,92vw);margin-inline:auto}
+
+  header{position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--paper) 92%, white);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{font-family:var(--display);font-weight:800;font-size:1.05rem;line-height:1.2;max-width:52%}
+  .brand small{display:block;font-family:var(--body);font-weight:500;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  nav{display:none;gap:22px;font-size:.95rem;font-weight:500}
+  nav a{text-decoration:none;color:var(--muted)}
+  nav a:hover{color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-weight:600;font-size:1rem;padding:14px 22px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;transition:transform .12s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-sm{padding:11px 16px;font-size:.92rem}
+
+  .hero{padding:clamp(34px,7vw,64px) 0 clamp(28px,5vw,48px)}
+  .hero h1{font-size:clamp(2.05rem,6.4vw,3.5rem);font-weight:800;line-height:1.04;max-width:19ch}
+  .hero .sub{margin-top:16px;font-size:clamp(1rem,2.4vw,1.14rem);color:var(--muted);max-width:46ch}
+  .hero .actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+  .rating{margin-top:18px;font-size:.93rem;color:var(--muted)}
+  .stars{color:var(--accent);letter-spacing:.08em}
+
+  section{padding:clamp(38px,6vw,64px) 0;border-top:1px solid var(--line)}
+  .eyebrow{font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h2{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;margin-top:10px;line-height:1.12}
+  .lead{margin-top:12px;color:var(--muted);max-width:52ch}
+
+  .cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{font-size:1.1rem;font-weight:700}
+  .card p{margin-top:8px;color:var(--muted);font-size:.97rem}
+
+  .shots{display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px}
+  .slot{margin:0}
+  .frame{position:relative;aspect-ratio:4/3;border:2px dashed color-mix(in srgb, var(--accent) 45%, var(--line));border-radius:14px;background:color-mix(in srgb, var(--accent) 6%, #fff);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+  .frame .num{font-family:var(--display);font-weight:800;font-size:1.6rem;color:color-mix(in srgb, var(--accent) 65%, #fff)}
+  .frame .tag{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .slot figcaption{margin-top:10px;display:flex;flex-direction:column;gap:3px}
+  .slot strong{font-family:var(--display);font-size:.98rem}
+  .slot figcaption span{color:var(--muted);font-size:.9rem}
+
+  .proof{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr;gap:14px}
+  .proof li{display:flex;flex-direction:column;gap:4px;padding-left:18px;border-left:3px solid var(--accent)}
+  .proof strong{font-family:var(--display);font-size:1.02rem}
+  .proof span{color:var(--muted);font-size:.95rem}
+
+  .cta{background:#fff;border-top:1px solid var(--line)}
+  .cta h2{max-width:22ch}
+  .cta p{margin-top:14px;color:var(--muted);max-width:44ch}
+  .cta .actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+
+  footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+  footer .grid{display:grid;gap:14px}
+  footer strong{color:var(--ink);font-family:var(--display)}
+  footer a{text-decoration:none}
+
+  @media(min-width:760px){
+    nav{display:flex}
+    .cards{grid-template-columns:1fr 1fr}
+    .shots{grid-template-columns:repeat(3,1fr)}
+    .proof{grid-template-columns:1fr 1fr}
+    footer .grid{grid-template-columns:1.4fr 1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand">M &amp; M Nails and Spa<small>Nail salon · Huntington, WV</small></div>
+    <nav>
+      <a href="#services">What we do</a>
+      <a href="#photos">Photos</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="tel:3049626999">Call (304) 962-6999</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Manicures, pedicures and a proper spa day.</h1>
+      <p class="sub">Manicures, pedicures, gel and acrylic in Huntington, West Virginia. Rated 4.6 stars by 649 customers.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:3049626999">Call (304) 962-6999</a>
+        <a class="btn btn-secondary" href="#services">See what we do</a>
+      </div>
+      <p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.6 out of 5 from 649 Google reviews</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Hands and feet, in one visit.</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Manicures</h3>
+          <p>Classic or gel, shaped and finished the way you ask for it, not the way it is quickest.</p>
+        </article>
+        <article class="card">
+          <h3>Pedicures</h3>
+          <p>Soak, shape and polish, with the foot care that makes the polish last past the first week.</p>
+        </article>
+        <article class="card">
+          <h3>Gel, acrylic and dip</h3>
+          <p>Full sets, fills and repairs, built to hold up through work, dishes and everything else.</p>
+        </article>
+        <article class="card">
+          <h3>Nail art</h3>
+          <p>From one clean colour to a full design. Bring a photo, or pick it out in the chair.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos">
+    <div class="wrap">
+      <p class="eyebrow">Your photos</p>
+      <h2>Your work is the whole pitch.</h2>
+      <p class="lead">Nobody books a salon from a paragraph. These three boxes are where your own pictures go.</p>
+      <div class="shots">
+        
+        <figure class="slot">
+          <div class="frame"><span class="num">1</span><span class="tag">Photo goes here</span></div>
+          <figcaption><strong>A set you are proud of</strong><span>Close up, good light, the one you would show a friend.</span></figcaption>
+        </figure>
+        <figure class="slot">
+          <div class="frame"><span class="num">2</span><span class="tag">Photo goes here</span></div>
+          <figcaption><strong>Your shop from the road</strong><span>So people driving past know exactly which door is yours.</span></figcaption>
+        </figure>
+        <figure class="slot">
+          <div class="frame"><span class="num">3</span><span class="tag">Photo goes here</span></div>
+          <figcaption><strong>The chairs and stations</strong><span>Clean and bright. It answers the question they are already asking.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why people call</p>
+      <h2>What you get at M &amp; M Nails and Spa</h2>
+      <ul class="proof">
+        <li><strong>4.6 out of 5</strong><span>from 649 Google reviews. That is a lot of people in Huntington who came back.</span></li>
+        <li><strong>Local to Huntington</strong><span>You are calling a salon in this town, not a number that routes somewhere else.</span></li>
+        <li><strong>Hands and feet together</strong><span>One appointment for the manicure and the pedicure, instead of two trips across town.</span></li>
+        <li><strong>You talk to the person doing it</strong><span>Say what you want, ask what it costs, and get a straight answer before you sit down.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="wrap">
+      <p class="eyebrow">Get a quote</p>
+      <h2>Call and ask what is open today.</h2>
+      <p>Manicure, pedicure or a full set. One call and you will know if there is a chair free.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:3049626999">Call (304) 962-6999</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div>
+      <strong>M &amp; M Nails and Spa</strong>
+      <p>Nail salon in Huntington, WV</p>
+    </div>
+    <div>
+      <p>Phone</p>
+      <a href="tel:3049626999">(304) 962-6999</a>
+    </div>
+    <div>
+      <p>Area</p>
+      <p>Huntington</p>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:22px;font-size:.82rem">
+    <p>Preview built for M &amp; M Nails and Spa by Ervins. Not affiliated, not live.</p>
+  </div>
+</footer>
+
+</body>
+</html>
