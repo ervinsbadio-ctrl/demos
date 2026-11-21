@@ -1,0 +1,129 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Badio Digital builder prompt v2</title>
+<style>
+body{margin:0;background:#08090A;color:#F3EFE7;font-family:Inter,system-ui,sans-serif;padding:20px}
+h1{font-size:20px;margin:0 0 6px}
+p{color:#9A948B;font-size:14px;margin:0 0 16px;line-height:1.5}
+button{width:100%%;height:52px;border:0;border-radius:999px;background:#FF4A1C;color:#fff;font-size:16px;font-weight:700;margin-bottom:16px}
+pre{white-space:pre-wrap;word-wrap:break-word;background:#141618;border:1px solid rgba(243,239,231,.1);border-radius:12px;padding:16px;font-size:13px;line-height:1.55;font-family:ui-monospace,monospace}
+</style></head><body>
+<h1>Builder prompt v2</h1>
+<p>Copy all of this, paste it into the Badio Digital app chat, send it.</p>
+<button id="c">Copy the whole prompt</button>
+<pre id="p"># Builder prompt v2: Badio Digital redesign (dark studio look, no blue)
+
+App: Badio Digital, id 6aff4656a589221e2da77d20
+Live: https://badiodigital.ervinsbadio.com
+Source call: ended owner call 2026-11-21 01:00 UTC, call id `0af2386fa8b4ac8492eefe28`
+Mode: redesign. Copy can be broadened (see Positioning). Everything else in this brief is design.
+
+## What he said on the call, in his words
+- &quot;It&#x27;s not done. I don&#x27;t like the blue.&quot;
+- &quot;I like the text. Text good, I want more design, make something that&#x27;s deal with website designer.&quot;
+- &quot;Animation ... it&#x27;s doing services for a bunch of companies. So I wanna be more like that, not specifically only on website for people who&#x27;s doing nail salon. I wanna be more large ... website and AI receptionist, but I wanna be more large.&quot;
+- Reference site he pointed at: The Nexvion Co, a dark near-black page with a red accent, grid and glow, pill nav, motion graphics agency.
+
+## Positioning change (the important one)
+Badio Digital is no longer &quot;salon websites&quot;. It is a small digital studio for local businesses selling three
+things: a website, an AI receptionist that answers the phone, and a booking flow. Salons stay as the proof
+(Lavalette is real and he built it), not as the limit.
+
+## Art direction card
+- FEELING: dark, sharp, built by a designer.
+- SIGNATURE IDEA: a thin red-orange rule that runs through the page and becomes the accent on every button.
+- PALETTE (no blue anywhere, do not reuse navy #17324D):
+  ground #08090A / ground-alt #0E1011 / surface #141618 / ink #F3EFE7 / ink-muted #9A948B /
+  accent #FF4A1C / line rgba(243,239,231,0.10)
+- TYPE: Archivo 700/800 for every heading, tracking -0.03em, line-height 0.95. Inter 400/500 body at 17px / 1.65.
+  Eyebrow: Archivo 600, 11px, uppercase, tracking 0.18em, ink-muted.
+  Desktop h1 clamp 48-84px, h2 40px, h3 20px. Phone h1 38px, h2 28px.
+- SHAPE: cards 16px radius, buttons fully rounded pill, images 12px radius, 1px hairline borders.
+- GRID: max 1180px, gutters 20px phone / 48px desktop, section padding 72px phone / 112px desktop.
+- TEXTURE: one fixed faint 32px grid plus two soft accent glow blobs behind the hero at opacity 0.10, blur 120px.
+  Nothing else decorative.
+
+## Motion (this is what he asked for)
+- Reveal on scroll: sections fade up 16px over 500ms, 80ms stagger per child, IntersectionObserver, once.
+- Hero headline: words rise in 60ms apart on load.
+- Header: transparent at top, then ground at 80% with backdrop blur and a 1px bottom line after 40px scrolled.
+- Buttons lift 2px with an accent glow on hover, 160ms. Cards lift 4px and their border goes accent at 25%.
+- One marquee strip under the hero: &quot;Websites / AI receptionist / Booking / Branding / Walkthroughs&quot;, slow,
+  pauses on hover, track duplicated so it loops with no gap.
+- Hard rules: nothing delays the hero copy or the button. All motion off under prefers-reduced-motion.
+  Nothing moves more than 16px. No parallax. No autoplay video.
+
+## Section by section
+1. Header. Sticky. Wordmark &quot;Badio Digital&quot; Archivo 700 18px with a 6px accent square before it. Links:
+   Services, How it works, Work, Questions. Pill button &quot;Send my details&quot; in accent. Phone: wordmark left,
+   round menu button right, full screen panel with 56px rows.
+2. Hero. One screen, 100svh max, centred, never taller.
+   Eyebrow &quot;Huntington, West Virginia&quot;.
+   h1 &quot;Your business should look as good online as it runs in person.&quot;
+   Sub capped at 560px: &quot;I build the website, the booking flow and the AI receptionist that answers when you
+   can&#x27;t pick up. One person does the work, so you talk to the person building it.&quot;
+   Accent pill &quot;Send my details&quot; plus quiet link &quot;See a site I built&quot;.
+   Under the buttons at 14px ink-muted: &quot;Live in 48 hours. You see it finished before you decide.&quot;
+   Desktop right: browser frame card 380px wide (surface, 1px line, 12px radius, three dots in the top bar)
+   holding the Lavalette screenshot, tilted -2deg, caption under it at 13px:
+   &quot;Lavalette Nails and Spa, Huntington. A salon site I built.&quot; Phone: card goes under the text.
+3. Marquee strip. Full width, 1px lines top and bottom, 44px tall, Archivo 600 13px uppercase, tracking 0.16em,
+   ink-muted, accent dot between words.
+4. Services. Three cards on ground-alt. Each: 01/02/03 numeral in accent 13px, Archivo 700 22px title, 16px body.
+   Website: &quot;A one page site with your services, your photos, your hours and a button that rings your phone.&quot;
+   AI receptionist: &quot;It answers the calls you cannot, takes the name and the number, and sends it to you.&quot;
+   Booking: &quot;A form or a link that takes the request at any hour, so a 9pm enquiry is not a lost job.&quot;
+   Under the grid at 14px ink-muted: &quot;Built for salons, barbers, trades, clinics and shops. Any local business
+   that lives on the phone.&quot;
+5. What it costs you right now. Full bleed ground-alt band with 1px lines. Three columns, accent numerals 01 02 03
+   at 48px and 30% opacity, Archivo 700 24px heading, 17px body. Keep his three loss points, wording widened
+   off salons only:
+   - Nothing to find: &quot;Someone hears about you, searches your name, and finds nothing to look at, so they go to
+     the next place.&quot;
+   - The message comes at 9pm: &quot;They decide at night, nobody answers, and by morning they have booked somewhere
+     else.&quot;
+   - Your best work stays in your camera roll: &quot;The work you are proud of sits in your phone, where a new
+     customer will never see it.&quot;
+6. How it works, in order. Six rows, two columns of three at desktop, one on phone. Each row a 40px surface chip
+   with the accent numeral and the existing step text at 17px, hairline dividers.
+7. Work. The Lavalette desktop screenshot at full width inside a browser frame (12px radius, 1px line, 28px top
+   bar, three dots). Below, left: h2 &quot;Lavalette Nails &amp; Spa, Huntington&quot; and the existing paragraph. Right: quiet
+   link &quot;Open the live site&quot;. No second project until one is real.
+8. About. Two columns. Left: surface block with the wordmark large in Archivo 700 40px and
+   &quot;Huntington, West Virginia&quot; at 14px. Right: h2 &quot;I build these myself.&quot; and the existing paragraph, with
+   &quot;salons&quot; widened to &quot;local businesses&quot;.
+9. Questions. Five native details/summary rows, hairline dividers, a 20px accent plus that becomes a minus.
+   First row open. Keep the existing five answers, and add the AI receptionist line to the &quot;I don&#x27;t have time&quot;
+   answer.
+10. Contact. Full bleed ground-alt. Left: h2 &quot;Send me your details.&quot; and the existing paragraph, the phone as a
+    28px Archivo 700 tel: link, the email, and &quot;I answer within one business day.&quot; Right: a surface card, 16px
+    radius, 32px padding, four labelled fields (name, business name, phone, what do you need), 48px tall, 1px
+    line borders, accent focus ring, accent pill submit. Inline success and error text, never a fake success.
+11. Footer. ground, hairline top. Wordmark, one line of what he does, phone, email, and
+    &quot;Built and run by one person in Huntington, West Virginia.&quot;
+
+## Must not change
+- No prices anywhere on the page.
+- No reviews, testimonials, ratings, client logos, awards, guarantees, statistics or client counts. There are none.
+- Phone stays 304-544-8511 as a tel: link. Enquiries stay at ervinslyonorbadio@gmail.com.
+- The form keeps saving to the Enquiries entity with name, business_name, phone, message, source.
+- Only the two existing Lavalette screenshots. No new images, no AI generated images, no stock photos.
+- No image behind any text, ever. No em-dashes anywhere in the copy.
+- No blue. If navy #17324D still exists anywhere in the stylesheet, remove it.
+
+## Check before finishing
+- Hero fits one screen at 1440x900 and 390x844 without scrolling, and nothing scrolls sideways at 390px.
+- One h1. Every nav anchor lands on its section. Focus rings visible. Tap targets 44px.
+- With prefers-reduced-motion on the page is static and still complete.
+- A real form submit creates one Enquiries row and shows the inline success message.
+</pre>
+<script>
+document.getElementById('c').onclick=function(){
+  var t=document.getElementById('p').innerText;
+  navigator.clipboard.writeText(t).then(function(){document.getElementById('c').textContent='Copied'},function(){
+    var r=document.createRange();r.selectNodeContents(document.getElementById('p'));
+    var s=getSelection();s.removeAllRanges();s.addRange(r);
+    document.getElementById('c').textContent='Selected, now long press to copy';
+  });
+};
+</script></body></html>
