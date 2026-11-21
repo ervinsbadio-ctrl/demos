@@ -155,6 +155,11 @@ footer{background:var(--ground);border-top:1px solid var(--line);padding:48px 0}
 
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.2,.7,.3,1),transform .55s cubic-bezier(.2,.7,.3,1)}
 .reveal.in{opacity:1;transform:none}
+/* desktop pass: the hero card was 485x991 and pushed the CTA below the fold at 1440x900 */
+@media(min-width:820px){
+  .frame{max-width:330px;margin-left:auto;margin-right:auto}
+  .frame img{max-height:470px;object-fit:cover;object-position:top}
+}
 /* phone pass: hero must fit one screen (390x844), card would make it 1.7 screens */
 @media(max-width:819px){
   .hero{padding:96px 0 40px;min-height:auto}
