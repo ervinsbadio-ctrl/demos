@@ -5,7 +5,7 @@
 body{margin:0;background:#08090A;color:#F3EFE7;font-family:Inter,system-ui,sans-serif;padding:20px}
 h1{font-size:20px;margin:0 0 6px}
 p{color:#9A948B;font-size:14px;margin:0 0 16px;line-height:1.5}
-button{width:100%%;height:52px;border:0;border-radius:999px;background:#FF4A1C;color:#fff;font-size:16px;font-weight:700;margin-bottom:16px}
+button{width:100%;height:52px;border:0;border-radius:999px;background:#FF4A1C;color:#fff;font-size:16px;font-weight:700;margin-bottom:16px}
 pre{white-space:pre-wrap;word-wrap:break-word;background:#141618;border:1px solid rgba(243,239,231,.1);border-radius:12px;padding:16px;font-size:13px;line-height:1.55;font-family:ui-monospace,monospace}
 </style></head><body>
 <h1>Builder prompt v2</h1>
@@ -66,7 +66,10 @@ things: a website, an AI receptionist that answers the phone, and a booking flow
    Under the buttons at 14px ink-muted: &quot;Live in 48 hours. You see it finished before you decide.&quot;
    Desktop right: browser frame card 380px wide (surface, 1px line, 12px radius, three dots in the top bar)
    holding the Lavalette screenshot, tilted -2deg, caption under it at 13px:
-   &quot;Lavalette Nails and Spa, Huntington. A salon site I built.&quot; Phone: card goes under the text.
+   &quot;Lavalette Nails and Spa, Huntington. A salon site I built.&quot;
+   Phone: hide the card and its caption entirely below 820px. The hero is words only (eyebrow, h1, sub, two
+   buttons, micro line). The card is about 540px tall on a phone and pushes the hero to 1.7 screens, which
+   breaks the one screen rule above. The proof visual still appears full width in section 7 Work.
 3. Marquee strip. Full width, 1px lines top and bottom, 44px tall, Archivo 600 13px uppercase, tracking 0.16em,
    ink-muted, accent dot between words.
 4. Services. Three cards on ground-alt. Each: 01/02/03 numeral in accent 13px, Archivo 700 22px title, 16px body.
@@ -118,12 +121,7 @@ things: a website, an AI receptionist that answers the phone, and a booking flow
 - A real form submit creates one Enquiries row and shows the inline success message.
 </pre>
 <script>
-document.getElementById('c').onclick=function(){
-  var t=document.getElementById('p').innerText;
-  navigator.clipboard.writeText(t).then(function(){document.getElementById('c').textContent='Copied'},function(){
-    var r=document.createRange();r.selectNodeContents(document.getElementById('p'));
-    var s=getSelection();s.removeAllRanges();s.addRange(r);
-    document.getElementById('c').textContent='Selected, now long press to copy';
-  });
-};
-</script></body></html>
+const b=document.getElementById('c'),p=document.getElementById('p');
+b.onclick=async()=>{try{await navigator.clipboard.writeText(p.innerText);b.textContent='Copied'}catch(e){const r=document.createRange();r.selectNodeContents(p);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, now copy'}};
+</script>
+</body></html>
